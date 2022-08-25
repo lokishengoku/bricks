@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class {{feature_name.pascalCase()}}Route extends StatelessWidget {
   const {{feature_name.pascalCase()}}Route({Key? key}) : super(key: key);
 
-  static const String name = '${{feature_name}}';
+  static const String name = '/{{feature_name}}';
 
   static Route<void> route() {
     return MaterialPageRoute(
