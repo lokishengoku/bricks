@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class {{feature_name.pascalCase()}}Route extends StatelessWidget {
   const {{feature_name.pascalCase()}}Route({Key? key}) : super(key: key);
 
+  static const String name = '${{feature_name}}';
+
   static Route<void> route() {
     return MaterialPageRoute(
       builder: (ctx) {
@@ -18,6 +20,9 @@ class {{feature_name.pascalCase()}}Route extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const {{feature_name.pascalCase()}}View();
+    return BlocProvider(
+      create: (_) => {{feature_name.pascalCase()}}Bloc(),
+      child: const {{feature_name.pascalCase()}}View(),
+    );
   }
 }
